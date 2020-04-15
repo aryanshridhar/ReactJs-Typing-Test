@@ -1,0 +1,9 @@
+.change{
+    height: 35vh;
+    overflow:hidden;
+    padding-top: 23px;
+    border-radius: 10px;
+}
+.text{
+    font-size: 20px;
+}

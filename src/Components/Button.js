@@ -17,20 +17,19 @@ export default class Button extends Component {
     {
         e.preventDefault();
         this.setState({style : {...this.state.style , display : "none" }});
-        this.setState({disp : {...this.state.disp , display : "block"}});
+        this.setState({disp : {...this.state.disp , display : "flex"}});
     }
 
     render() {
         return (
             <React.Fragment>
-            <div>
                 <div className = 'row mt-5'>
                     <div className = 'col-12 text-center'>
-                        <button className = 'btn btn-info' style ={this.state.style} onClick = {this.hidebutton}>Start Test</button>
+                        <button className = 'btn btn-info' style ={this.state.style} onClick = {this.hidebutton}>Check My WPM</button>
                     </div>
                 </div>
-            </div>
-            <Display disp = {this.state.disp}/>
+                <Display disp = {this.state.disp}/>
+
             </React.Fragment>
         )
     }

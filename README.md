@@ -15,4 +15,4 @@ A typing test game built using React.js which counts your WPM.
 </ul>
 <br>
 
-
+<p>Issues and Pull requests are always welcomed :)<p>

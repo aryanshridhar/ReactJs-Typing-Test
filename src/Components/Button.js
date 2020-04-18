@@ -25,7 +25,7 @@ export default class Button extends Component {
             <React.Fragment>
                 <div className = 'row mt-5'>
                     <div className = 'col-12 text-center'>
-                        <button className = 'btn btn-info' style ={this.state.style} onClick = {this.hidebutton}>Check My WPM</button>
+                        <button id = 'startbtn' className = 'btn btn-info' style ={this.state.style} onClick = {this.hidebutton}>Check My WPM</button>
                     </div>
                 </div>
                 <Display disp = {this.state.disp}/>

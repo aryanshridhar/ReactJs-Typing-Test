@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Styles from './TypingHead.module.css'
-import Wpm from './Wpm'
-import Button from './Button'
 
 export default class TypingHead extends Component {
     render() {

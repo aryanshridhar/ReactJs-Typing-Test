@@ -7,7 +7,7 @@ export default class Heading extends Component {
             <div>
                 <div className = 'row'>
                     <div className = 'col-12 text-center'>
-                        <h3 className ={Styles.head}>Typing test</h3>
+                        <label className ={Styles.head}>Typing test</label>
                     </div>
                 </div>
             </div>

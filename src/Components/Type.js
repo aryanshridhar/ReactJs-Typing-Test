@@ -6,8 +6,9 @@ import Check from '../logic/Check'
 export default class Type extends Component {
 
     state = {
-        cursorpos : 0,
-        correct_typed : 0
+        all_words : 0,
+        correct_typed : 0,
+        wrong_words : 0
     }
 
 
@@ -15,10 +16,11 @@ export default class Type extends Component {
     {
         let words_typed = e.target.value.split(' ');
         let to_check = this.props.words.split(' ');
-        let correct_typed = Check(words_typed , to_check)
-        this.setState({state : this.state.cursorpos++ });
-        this.setState({correct_typed : correct_typed});
-        this.props.handlecorrect(this.state.correct_typed);
+        let typed = Check(words_typed , to_check)
+        this.setState({all_words : typed[0]});
+        this.setState({correct_typed : typed[1]});
+        this.setState({wrong_words : typed[2]});
+        this.props.handlecorrect(this.state.all_words , this.state.correct_typed , this.state.wrong_words);
     }
 
     render() {
@@ -26,8 +28,11 @@ export default class Type extends Component {
             <React.Fragment>
                 <TypingHead disp = {this.props.disp}/>
                 <div className = 'row' style = {this.props.disp}>
-                    <div className = 'col-7 text-left'>
+                    <div className = 'col-12 text-left'>
                         <textarea
+                            id = 'totype'
+                            readOnly = {true}
+                            autoFocus
                             onChange = {this.typinghandle}
                             autoFocus
                             placeholder = "Enter your words" 
